@@ -1,0 +1,18 @@
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider = "mongodb" // change to DB of choice
+    url      = env("DATABASE_URL") // datebase url
+}
+
+model User {
+    id String @id @default(auto()) @map("_id") @db.ObjectId
+
+    name  String?
+    email String  @unique
+
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+}
