@@ -36,6 +36,9 @@ async function bootstrap() {
 
   // start Nest application
   await app.listen(3000);
+
+  // get application URL
+  console.log(`Application is running on: ${await app.getUrl()}`);
 }
 
 // start Nest application

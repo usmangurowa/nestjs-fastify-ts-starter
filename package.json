@@ -20,6 +20,7 @@
     "db:ready": "npx prisma db push && npx prisma generate"
   },
   "dependencies": {
+    "@fastify/static": "^6.10.2",
     "@nestjs/common": "^10.0.0",
     "@nestjs/config": "^3.0.0",
     "@nestjs/core": "^10.0.0",
